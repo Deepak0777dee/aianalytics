@@ -15,11 +15,14 @@
       <h2>Page Not Found</h2>
       <p>Oops! The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <button onclick="window.history.back()" class="btn btn-outline" style="cursor:pointer;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Go Back
+        </button>
         <a href="index.html" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Back to Home
         </a>
-        <a href="contact.html" class="btn btn-outline">Contact Support</a>
       </div>
     </div>
   </div>
@@ -28,10 +31,10 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (typeof gsap !== 'undefined') {
-        gsap.from('.error-content h1', { y: -50, opacity: 0, duration: 0.8, ease: 'power3.out' });
-        gsap.from('.error-content h2', { y: 30, opacity: 0, duration: 0.7, delay: 0.2, ease: 'power3.out' });
-        gsap.from('.error-content p', { y: 20, opacity: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' });
-        gsap.from('.error-content .btn', { y: 20, opacity: 0, duration: 0.5, delay: 0.6, stagger: 0.1, ease: 'power3.out' });
+        gsap.fromTo('.error-content h1', { y: -50, opacity: 0 }, { y: 0, opacity: 0.15, duration: 0.8, ease: 'power3.out' });
+        gsap.fromTo('.error-content h2', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.2, ease: 'power3.out' });
+        gsap.fromTo('.error-content p', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, delay: 0.4, ease: 'power3.out' });
+        gsap.fromTo('.error-content .btn, .error-content button', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, delay: 0.6, stagger: 0.1, ease: 'power3.out' });
       }
     });
   </script>

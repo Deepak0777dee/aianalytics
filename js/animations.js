@@ -49,51 +49,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Section Title Animations ---------- */
   document.querySelectorAll('.section-title').forEach(title => {
-    gsap.from(title, {
-      scrollTrigger: {
-        trigger: title,
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.out'
-    });
+    gsap.fromTo(title, 
+      { y: 30, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: title,
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power3.out'
+      }
+    );
   });
 
   /* ---------- Stagger Card Animations ---------- */
   document.querySelectorAll('.stagger-children').forEach(container => {
-    const children = container.children;
+    const children = Array.from(container.children);
     if (children.length === 0) return;
 
-    gsap.from(children, {
-      scrollTrigger: {
-        trigger: container,
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.7,
-      stagger: 0.12,
-      ease: 'power3.out'
-    });
+    gsap.fromTo(children, 
+      { y: 40, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: container,
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power3.out'
+      }
+    );
   });
 
   /* ---------- Stats Counter Animation ---------- */
   document.querySelectorAll('.stats-grid').forEach(grid => {
-    gsap.from(grid.children, {
-      scrollTrigger: {
-        trigger: grid,
-        start: 'top 85%',
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
+    gsap.fromTo(grid.children, 
+      { y: 30, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: grid,
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power3.out'
+      }
+    );
   });
 
   /* ---------- Split Section Animations ---------- */
@@ -102,16 +109,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const right = grid.querySelector('.split-image, .reveal-right, :last-child');
 
     if (left) {
-      gsap.from(left, {
-        scrollTrigger: { trigger: grid, start: 'top 80%' },
-        x: -40, opacity: 0, duration: 0.9, ease: 'power3.out'
-      });
+      gsap.fromTo(left, 
+        { x: -40, opacity: 0 },
+        {
+          scrollTrigger: { trigger: grid, start: 'top 80%' },
+          x: 0, opacity: 1, duration: 0.9, ease: 'power3.out'
+        }
+      );
     }
     if (right) {
-      gsap.from(right, {
-        scrollTrigger: { trigger: grid, start: 'top 80%' },
-        x: 40, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.15
-      });
+      gsap.fromTo(right, 
+        { x: 40, opacity: 0 },
+        {
+          scrollTrigger: { trigger: grid, start: 'top 80%' },
+          x: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay: 0.15
+        }
+      );
     }
   });
 
@@ -166,23 +179,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Standalone Reveal Animations ---------- */
   document.querySelectorAll('.reveal:not(.stagger-children .reveal)').forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 85%' },
-      y: 40, opacity: 0, duration: 0.8, ease: 'power3.out'
-    });
+    gsap.fromTo(el, 
+      { y: 40, opacity: 0 },
+      {
+        scrollTrigger: { trigger: el, start: 'top 85%' },
+        y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
+      }
+    );
   });
 
   document.querySelectorAll('.reveal-left').forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 85%' },
-      x: -50, opacity: 0, duration: 0.8, ease: 'power3.out'
-    });
+    gsap.fromTo(el, 
+      { x: -50, opacity: 0 },
+      {
+        scrollTrigger: { trigger: el, start: 'top 85%' },
+        x: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
+      }
+    );
   });
 
   document.querySelectorAll('.reveal-right').forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 85%' },
-      x: 50, opacity: 0, duration: 0.8, ease: 'power3.out'
-    });
+    gsap.fromTo(el, 
+      { x: 50, opacity: 0 },
+      {
+        scrollTrigger: { trigger: el, start: 'top 85%' },
+        x: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
+      }
+    );
   });
 });

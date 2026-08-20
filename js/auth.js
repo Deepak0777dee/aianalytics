@@ -1,6 +1,6 @@
 /* ============================================
    AUTH.JS — Authentication & RBAC
-   Roles: Admin, Analyst, Viewer
+   Roles: Admin, Analyst
    Stackly AI Analytics
    ============================================ */
 
@@ -11,9 +11,8 @@ function getUsers() {
   let users = JSON.parse(localStorage.getItem(USERS_DB_KEY));
   if (!users || users.length === 0) {
     users = [
-      { id: 1, name: 'Admin User', email: 'admin@thestackly.com', password: 'Admin@123', role: 'admin', phone: '+91 67585 85497', createdAt: '2026-01-15' },
-      { id: 2, name: 'Sarah Analyst', email: 'analyst@thestackly.com', password: 'Analyst@123', role: 'analyst', phone: '+91 98765 43210', createdAt: '2026-03-22' },
-      { id: 3, name: 'John Viewer', email: 'viewer@thestackly.com', password: 'Viewer@123', role: 'viewer', phone: '+91 87654 32109', createdAt: '2026-05-10' },
+      { id: 1, name: 'Admin User', email: 'admin@thestackly.com', password: 'Admin@123', role: 'admin', phone: '+1 234 567 8900', createdAt: '2026-01-15' },
+      { id: 2, name: 'Analyst User', email: 'analyst@thestackly.com', password: 'Analyst@123', role: 'analyst', phone: '+44 20 7946 0958', createdAt: '2026-03-22' }
     ];
     localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
   }
@@ -24,7 +23,7 @@ function saveUsers(users) {
   localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
 }
 
-function authLogin(email, password, role = 'viewer') {
+function authLogin(email, password, role = 'analyst') {
   const users = getUsers();
   let user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
   if (!user) {
@@ -40,7 +39,7 @@ function authLogin(email, password, role = 'viewer') {
   return { success: true, user: session };
 }
 
-function authSignup(name, email, password, phone, role = 'viewer') {
+function authSignup(name, email, password, phone, role = 'analyst') {
   const users = getUsers();
   const newUser = {
     id: Date.now(),

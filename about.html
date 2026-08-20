@@ -12,7 +12,7 @@
   <div id="page-loader" role="status" aria-label="Loading"><div class="loader-spinner"></div></div>
 
   <!-- Header -->
-  <header class="header" id="mainHeader">
+  <header class="header dark-mode" id="mainHeader">
     <div class="container">
       <a href="index.html" class="logo"><img src="images/logo-stackly.webp" alt="Stackly" /></a>
       <nav class="nav-links">
@@ -57,43 +57,128 @@
           <p>Today, Stackly powers analytics for over 100,000 websites worldwide, from indie developers to Fortune 500 companies. We're proudly bootstrapped and focused on building the best product for our customers.</p>
         </div>
         <div class="split-image reveal-right">
-          <img src="images/7b3031e872cad6b9c50d43afa7a527e3.webp" alt="Stackly Analytics Data" style="width:100%; border-radius:var(--radius-xl); box-shadow:var(--shadow-xl);" />
+          <img src="images/data_flow.webp" alt="Stackly Analytics Data" style="width:100%; border-radius:var(--radius-xl); box-shadow:var(--shadow-xl);" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Values -->
+  <!-- Values (Bento Layout) -->
   <section class="section" style="background:var(--gray-50);">
-    <div class="container text-center">
-      <div class="reveal">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 4rem;">
         <span class="section-label">Our Values</span>
         <h2 class="section-title">What Drives Us</h2>
-        <p class="section-subtitle">Every decision we make is guided by these core principles.</p>
+        <p class="section-subtitle">Every decision we make is guided by these core principles. We build software that respects users and delivers exceptional performance.</p>
       </div>
-      <div class="features-grid stagger-children">
-        <div class="feature-card reveal">
-          <div class="feature-icon" style="background:rgba(27,58,45,0.08);color:var(--primary);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h4>Privacy First</h4>
-          <p>We never collect personal data, use cookies, or track individuals. Your users' privacy is non-negotiable.</p>
+
+      <div class="values-bento-grid stagger-children">
+        
+        <!-- Bento 1: Spans 2 cols -->
+        <div class="vb-card vb-large reveal" style="background: var(--primary); color: white;">
+          <div class="vb-content">
+            <div class="vb-icon" style="color: var(--accent-light);">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Privacy First</h3>
+            <p style="color: rgba(255,255,255,0.85);">We never collect personal data, use cookies, or track individuals across sites. Your users' privacy is non-negotiable. Analytics shouldn't cost you your users' anonymity.</p>
+          </div>
+          <div class="vb-bg-shape"></div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon" style="background:var(--success-bg);color:var(--success);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <h4>Performance Obsessed</h4>
-          <p>Our script is under 1KB. We're obsessed with speed and ensuring we never impact your Core Web Vitals.</p>
+
+        <!-- Bento 2: Spans 1 col -->
+        <div class="vb-card vb-medium reveal" style="background: var(--accent-light); color: var(--primary);">
+          <div class="vb-content">
+            <div class="vb-icon" style="color: var(--primary);">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Performance Obsessed</h3>
+            <p style="color: rgba(6,78,59,0.8);">Our tracking script is less than 1KB. We ensure analytics never impacts your Core Web Vitals.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon" style="background:var(--info-bg);color:var(--info);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-          <h4>Open & Transparent</h4>
-          <p>We publish our data practices, open-source our tools, and believe in building in the open.</p>
+
+        <!-- Bento 3: Spans 1 col -->
+        <div class="vb-card vb-medium reveal" style="background: var(--white); color: var(--dark); border: 1px solid var(--gray-200);">
+          <div class="vb-content">
+            <div class="vb-icon" style="color: var(--primary);">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h3>Open & Transparent</h3>
+            <p style="color: var(--gray-600);">We publish our data practices and firmly believe in building in the open.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon" style="background:var(--warning-bg);color:var(--warning);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <h4>Customer Obsessed</h4>
-          <p>Every feature we build starts with customer feedback. We're building the tool our users want.</p>
+
+        <!-- Bento 4: Spans 2 cols -->
+        <div class="vb-card vb-large reveal" style="background: var(--dark); color: white; position:relative; overflow:hidden;">
+          <div class="vb-content" style="position:relative; z-index:2;">
+            <div class="vb-icon" style="color: var(--accent-light);">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Customer Obsessed</h3>
+            <p style="color: rgba(255,255,255,0.7);">Every feature starts with customer feedback. We're building the exact tools you ask for to help you succeed.</p>
+          </div>
+          <div style="position:absolute; top:-50%; right:-20%; width:200px; height:200px; background:var(--primary); filter:blur(60px); border-radius:50%; z-index:1; opacity:0.6;"></div>
         </div>
+
       </div>
     </div>
+    <style>
+      .values-bento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .vb-card {
+        border-radius: 1.5rem;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .vb-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        margin-top: auto;
+      }
+      .vb-card p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      .vb-large {
+        grid-column: span 2;
+      }
+      .vb-medium {
+        grid-column: span 1;
+      }
+      .vb-icon {
+        margin-bottom: 4rem;
+      }
+      .vb-bg-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(135deg, transparent 50%, rgba(167, 243, 208, 0.05) 50%);
+        border-radius: 100% 0 0 0;
+      }
+      @media (max-width: 900px) {
+        .values-bento-grid {
+          grid-template-columns: 1fr;
+        }
+        .vb-large, .vb-medium {
+          grid-column: span 1;
+        }
+        .vb-card { padding: 2rem; }
+      }
+    </style>
   </section>
 
   <!-- Team -->
@@ -193,7 +278,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo"><img src="images/logo-stackly.webp" alt="Stackly" /></a>
-          <p>AI-powered, privacy-focused analytics platform. Simple, fast, and built for the modern web.</p>
+          <p>AI-powered, privacy-focused analytics platform. Simple, fast, and built for the modern web. Gain insights without compromising user trust.</p>
           <div class="footer-social">
             <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
             <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
@@ -201,13 +286,54 @@
             <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
         </div>
-        <div class="footer-col"><h4>Product</h4><ul><li><a href="solutions.html">Solutions</a></li><li><a href="use-cases.html">Use Cases</a></li><li><a href="404.html">Changelog</a></li><li><a href="404.html">Documentation</a></li></ul></div>
-        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="resources.html">Blog</a></li><li><a href="404.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Contact Info</h4><ul><li><a href="404.html" style="display:flex;align-items:flex-start;gap:0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top:3px;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>MMR Complex, Chinna Thirupathi, Salem, TN 636008, India</a></li><li><a href="mailto:info@thestackly.com" style="display:flex;align-items:center;gap:0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@thestackly.com</a></li><li><a href="tel:+916758585497" style="display:flex;align-items:center;gap:0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+91 67585 85497</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Blog</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>
+              <a href="404.html" style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top:3px;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                MMR Complex, Chinna Thirupathi, Salem, TN 636008, India
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@thestackly.com" style="display:flex;align-items:center;gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                info@thestackly.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+916758585497" style="display:flex;align-items:center;gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                +91 67585 85497
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Stackly AI Analytics. All Rights Reserved.</p>
-        <div class="footer-bottom-links"><a href="404.html">Privacy Policy</a><a href="404.html">Terms of Service</a></div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
