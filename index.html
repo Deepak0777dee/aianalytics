@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Simple, Fast & Privacy-Focused AI Analytics</title>
+  <meta name="description" content="Stackly delivers simple, lightning-fast, and privacy-focused AI analytics. Gain deep insights without compromising privacy. Real-time, actionable dashboards." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader" role="status" aria-label="Loading">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="mainHeader">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-stackly.webp" alt="Stackly AI Analytics" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-right">
+        <a href="login.html" class="header-cta">Sign In</a>
+        <button class="ham-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-overlay"></div>
+  <div id="mobile-menu">
+    <button class="mobile-close" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img src="images/logo-stackly.webp" alt="Stackly" style="height:28px;filter:brightness(0) invert(1);margin-bottom:2rem;" />
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" style="color:var(--accent-light);">Sign In</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Trusted on 100,000+ websites and counting
+          </div>
+          <h1>Simple, Fast & <span>Privacy Focused</span> Analytics</h1>
+          <p class="hero-text">Stackly delivers simple, lightning-fast, and privacy-focused analytics, giving you the insights you need. Real-time, actionable data — without compromising user privacy.</p>
+          <div class="hero-btns">
+            <a href="signup.html" class="btn btn-primary">Get started now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="solutions.html" class="btn-ghost">Get a Demo</a>
+          </div>
+          <div class="hero-trusted">
+            <p>Trusted on 100,000+ websites and counting</p>
+            <div class="hero-trusted-logos">
+              <span>AUDIOLAB</span>
+              <span>bidlet.com</span>
+              <span>PumpFoliolet</span>
+              <span>Hako</span>
+              <span>Bang & Olufsen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Dashboard Preview Card -->
+          <div class="hero-dashboard">
+            <div class="hero-dash-top">
+              <div class="hero-dash-dot" style="background:#ef4444;"></div>
+              <div class="hero-dash-dot" style="background:#f59e0b;"></div>
+              <div class="hero-dash-dot" style="background:#10b981;"></div>
+            </div>
+            <div class="hero-dash-body">
+              <div class="hero-dash-metric">
+                <div>
+                  <div class="label">Subscription Sales</div>
+                  <div class="value">$52,000</div>
+                </div>
+                <div class="change">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                  32.1%
+                </div>
+              </div>
+              <div class="hero-dash-metric">
+                <div>
+                  <div class="label">Total Page Views</div>
+                  <div class="value">32,000</div>
+                </div>
+                <div class="change">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                  16.1%
+                </div>
+              </div>
+              <div class="hero-dash-metric">
+                <div>
+                  <div class="label">Affiliate Earnings</div>
+                  <div class="value">$12,500</div>
+                </div>
+                <div class="change">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                  8.4%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="hero-float-card card-1">
+            <div style="font-size:0.72rem;color:var(--gray-400);font-weight:500;">Performance</div>
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.25rem;">
+              <div class="mini-bars">
+                <div class="mini-bar" style="height:15px;animation-delay:0.1s;"></div>
+                <div class="mini-bar" style="height:25px;animation-delay:0.2s;"></div>
+                <div class="mini-bar" style="height:35px;animation-delay:0.3s;"></div>
+                <div class="mini-bar" style="height:20px;animation-delay:0.4s;"></div>
+                <div class="mini-bar" style="height:40px;animation-delay:0.5s;"></div>
+              </div>
+              <span style="font-size:1rem;font-weight:800;color:var(--primary);">+24%</span>
+            </div>
+          </div>
+          <div class="hero-float-card card-2">
+            <div style="display:flex;align-items:center;gap:0.5rem;">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--success-bg);color:var(--success);display:flex;align-items:center;justify-content:center;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.72rem;color:var(--gray-400);">Bounce Rate</div>
+                <div style="font-size:1rem;font-weight:800;color:var(--success);">-12.4%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="272" data-suffix="">0</div>
+          <div class="stat-label">Realtime Users</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="15300" data-suffix="+">0</div>
+          <div class="stat-label">People Reached</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="32100" data-suffix="+">0</div>
+          <div class="stat-label">Total Views</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="72" data-suffix="%">0</div>
+          <div class="stat-label">Bounce Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY-FIRST ANALYTICS ===== -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Why Stackly</span>
+        <h2 class="section-title">The Future of Privacy-First Analytics</h2>
+        <p class="section-subtitle">Gain deep insights without compromising privacy. Our AI-powered dashboard delivers real-time, actionable analytics — fast, simple, and secure.</p>
+      </div>
+
+      <div class="split-grid" style="margin-top:3rem;">
+        <div class="reveal-left">
+          <h3 style="margin-bottom:1rem;">Watch demo of our dashboard</h3>
+          <p style="margin-bottom:1.5rem;">Experience the power of Stackly's analytics platform. Track user interactions like sign-ups, clicks, and purchases to optimize campaigns and make data-driven decisions.</p>
+          <ul style="margin-bottom:2rem;padding-left:0;">
+            <li style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0;font-size:0.95rem;color:var(--gray-600);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Event Tracking — Monitor sign-ups, clicks & conversions
+            </li>
+            <li style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0;font-size:0.95rem;color:var(--gray-600);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Reports & Dashboards — Automated email reports with campaign performance tracking
+            </li>
+            <li style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0;font-size:0.95rem;color:var(--gray-600);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Reliability & Scalability — Enterprise-grade infrastructure
+            </li>
+            <li style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0;font-size:0.95rem;color:var(--gray-600);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Developer-Friendly & SEO Optimized
+            </li>
+          </ul>
+          <a href="solutions.html" class="btn btn-outline">Watch demo of our dashboard</a>
+        </div>
+        <div class="split-image reveal-right">
+          <div class="hero-dashboard" style="box-shadow:var(--shadow-xl);">
+            <div class="hero-dash-top">
+              <div class="hero-dash-dot" style="background:#ef4444;"></div>
+              <div class="hero-dash-dot" style="background:#f59e0b;"></div>
+              <div class="hero-dash-dot" style="background:#10b981;"></div>
+              <span style="color:rgba(255,255,255,0.5);font-size:0.75rem;margin-left:auto;">Performance Metrics</span>
+            </div>
+            <div class="hero-dash-body" style="background:var(--gray-50);">
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+                <div style="background:var(--white);border-radius:var(--radius-md);padding:1rem;text-align:center;border:1px solid var(--gray-200);">
+                  <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">$52K</div>
+                  <div style="font-size:0.7rem;color:var(--gray-400);">Revenue</div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius-md);padding:1rem;text-align:center;border:1px solid var(--gray-200);">
+                  <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">$32K</div>
+                  <div style="font-size:0.7rem;color:var(--gray-400);">Purchases</div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius-md);padding:1rem;text-align:center;border:1px solid var(--gray-200);">
+                  <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">$12.5K</div>
+                  <div style="font-size:0.7rem;color:var(--gray-400);">Earnings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-label">Platform Features</span>
+        <h2 class="section-title">Analytics & Performance</h2>
+        <p class="section-subtitle">Unlock powerful insights and gain real-time tracking capabilities that empower you to make data-driven decisions.</p>
+      </div>
+
+      <div class="features-grid stagger-children">
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(27,58,45,0.08);color:var(--primary);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h4>Real-Time Analytics</h4>
+          <p>Monitor your website traffic in real-time with live dashboards. See who's on your site, what they're doing, and where they're coming from.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:var(--info-bg);color:var(--info);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Privacy Compliant</h4>
+          <p>No cookies, no personal data collection. GDPR, CCPA, and PECR compliant out of the box. No cookie banners needed.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:var(--success-bg);color:var(--success);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4>Event Tracking</h4>
+          <p>Track user interactions like sign-ups, clicks, and purchases to optimize your campaigns and make data-driven decisions.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:var(--warning-bg);color:var(--warning);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h4>Automated Reports</h4>
+          <p>Receive automated email reports and track campaign performance with UTMs for data-driven decisions.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h4>Lightweight Script</h4>
+          <p>Under 1KB script — loads 45x faster than Google Analytics. No impact on your Core Web Vitals or page speed scores.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:var(--danger-bg);color:var(--danger);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <h4>Open API Access</h4>
+          <p>Full API access to build custom integrations, export data, and connect with your existing tools and workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD PREVIEW (Clarity Metrics) ===== -->
+  <section class="dash-preview-section section">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-label">Live Dashboard</span>
+        <h2 class="section-title" style="color:var(--white);">Clarity Metrics</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.55);">Aug 1 to Aug 10, 2024 · No comparison · Auto refreshing</p>
+      </div>
+
+      <div class="metrics-row reveal">
+        <div class="metric-pill">
+          <div class="val">272</div>
+          <div class="lbl">Realtime</div>
+        </div>
+        <div class="metric-pill">
+          <div class="val">15.3k</div>
+          <div class="lbl">People</div>
+        </div>
+        <div class="metric-pill">
+          <div class="val">32.1k</div>
+          <div class="lbl">Views</div>
+        </div>
+        <div class="metric-pill">
+          <div class="val">01:12</div>
+          <div class="lbl">Avg time on site</div>
+        </div>
+        <div class="metric-pill">
+          <div class="val">72%</div>
+          <div class="lbl">Bounce rate</div>
+        </div>
+        <div class="metric-pill">
+          <div class="val">2.3k</div>
+          <div class="lbl">Event completions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTEGRATION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <div class="reveal-left">
+          <span class="section-label">Integration</span>
+          <h2 style="margin-bottom:1rem;">Integrate with your existing tools and tech stack</h2>
+          <p style="margin-bottom:1.5rem;">Our lightweight analytics script is built for seamless integration — just a few kilobytes in your source code. Whether you're using a CMS like WordPress, modern frameworks like Next.js and Nuxt, or marketing tools like Convertkit, Stackly fits right in.</p>
+          <p>Even if you don't see a direct integration, our universal embed provides ensures you can add Stackly to virtually any platform with ease.</p>
+          <a href="404.html" class="btn btn-outline" style="margin-top:1.5rem;">View All Integrations</a>
+        </div>
+        <div class="reveal-right">
+          <div class="integration-grid">
+            <div class="integration-item">WordPress</div>
+            <div class="integration-item">Next.js</div>
+            <div class="integration-item">Nuxt</div>
+            <div class="integration-item">Webflow</div>
+            <div class="integration-item">Gatsby</div>
+            <div class="integration-item">Inertia.js</div>
+            <div class="integration-item">Shopify</div>
+            <div class="integration-item">Svelte</div>
+            <div class="integration-item">Vue.js</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Start for free. Upgrade when you're ready. No hidden fees, no surprises.</p>
+      </div>
+
+      <div class="pricing-grid stagger-children">
+        <div class="pricing-card reveal">
+          <div class="pricing-name">Starter</div>
+          <div class="pricing-price">Free<span></span></div>
+          <p class="pricing-desc">Perfect for personal projects and small sites.</p>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Up to 10K monthly page views</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 1 Website</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Basic Dashboard</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 6 Month Data Retention</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started Free</a>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Growth</div>
+          <div class="pricing-price">$25<span>/month</span></div>
+          <p class="pricing-desc">For growing businesses that need more power.</p>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Up to 50 Sites Included</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Ecommerce/Event Tracking</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Easy Integration</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> API Access</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Forever Data Retention</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary" style="width:100%;justify-content:center;">Start your 30-day free trial</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-name">Enterprise</div>
+          <div class="pricing-price">Custom</div>
+          <p class="pricing-desc">For large organizations with custom needs.</p>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Unlimited Sites</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Dedicated Account Manager</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Custom Integrations</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> SLA & Priority Support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Hear from the teams and founders who switched to Stackly for privacy-focused analytics.</p>
+      </div>
+
+      <div class="testimonials-grid stagger-children" style="margin-top:2rem;">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Analytics for Growth insights are entirely powered by Stackly. It's a seamless experience compared to Google Analytics, with just the right features and an intuitive platform that makes tracking effortless."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Alex Carter</div>
+              <div class="testimonial-role">Founder & CEO, Hako</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Switching from Google Analytics to Stackly was the best decision we made. Our page load times improved by 40%, and we finally have an analytics tool that respects our users' privacy."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Maria Chen</div>
+              <div class="testimonial-role">CTO, Audiolab</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#e5e7eb"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"The dashboard is incredibly intuitive. Our marketing team adopted it in minutes. The real-time data helps us make faster decisions and the privacy compliance saves us legal headaches."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">J</div>
+            <div>
+              <div class="testimonial-name">James Wilson</div>
+              <div class="testimonial-role">VP Marketing, bidlet.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2>AI-Powered analytics, built for growth</h2>
+        <p>At Stackly, we strongly believe that analytics tools should be insightful, not invasive. This is why we created a privacy-focused, simple software that gives you the data you need.</p>
+        <div class="cta-btns">
+          <a href="signup.html" class="btn btn-white">Start Free Trial</a>
+          <a href="contact.html" class="btn btn-ghost" style="color:var(--white);border-color:rgba(255,255,255,0.2);">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="images/logo-stackly.webp" alt="Stackly" /></a>
+          <p>AI-powered, privacy-focused analytics platform. Simple, fast, and built for the modern web. Gain insights without compromising user trust.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="404.html" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+            <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Blog</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>
+              <a href="404.html" style="display:flex;align-items:flex-start;gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top:3px;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                MMR Complex, Chinna Thirupathi, Salem, TN 636008, India
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@thestackly.com" style="display:flex;align-items:center;gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                info@thestackly.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+916758585497" style="display:flex;align-items:center;gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                +91 67585 85497
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly AI Analytics. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

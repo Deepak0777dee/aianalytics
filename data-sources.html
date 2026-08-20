@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Sources — Stackly AI Analytics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="js/auth.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => { if (!authProtectRoute()) return; authApplyRBAC(); });</script>
+</head>
+<body>
+
+<aside class="dashboard-sidebar" id="sidebar">
+  <div class="sidebar-header"><a href="index.html" class="sidebar-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></a><button class="sidebar-close" id="sidebarClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="sidebar-user"><div class="sidebar-user-avatar" id="sb-avatar">U</div><div><div class="sidebar-user-name" id="sb-name">User</div><div class="sidebar-user-role" id="sb-role">Role</div><div class="sidebar-user-email" id="sb-email">email</div></div></div>
+  <nav class="sidebar-nav">
+    <div class="nav-label">Main Menu</div>
+    <a href="dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Dashboard</a>
+    <a href="reports.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Reports</a>
+    <a href="data-sources.html" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> Data Sources</a>
+    <div data-role="admin-only"><div class="nav-label" style="margin-top:1rem;">Administration</div><a href="users.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Users</a></div>
+  </nav>
+  <div class="sidebar-footer"><button onclick="authLogout()" class="sidebar-link" style="width:100%;color:var(--danger);justify-content:center;border:1px solid rgba(239,68,68,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Logout</button></div>
+</aside>
+
+<main class="dashboard-main">
+  <header class="dashboard-topbar">
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <h1 class="dashboard-title">Data Sources & Integrations</h1>
+    </div>
+    <div class="topbar-right"><span id="topbar-name" style="font-size:0.9rem;color:var(--gray-500);"></span><div class="topbar-avatar" id="topbarAvatar">U</div></div>
+  </header>
+
+  <div class="dashboard-content">
+    <!-- Stats -->
+    <div class="dash-stats-grid">
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon" style="background:rgba(27,58,45,0.08);color:var(--primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <div class="dash-stat-info"><h4>Connected Sources</h4><div class="val">8</div></div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon" style="background:var(--success-bg);color:var(--success);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="dash-stat-info"><h4>Active Pipelines</h4><div class="val">6</div></div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon" style="background:var(--info-bg);color:var(--info);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="dash-stat-info"><h4>Events Today</h4><div class="val">24,892</div></div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon" style="background:var(--warning-bg);color:var(--warning);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="dash-stat-info"><h4>Avg. Latency</h4><div class="val">42ms</div></div>
+      </div>
+    </div>
+
+    <!-- Connected Sources -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+      <h3 style="font-size:1.1rem;font-weight:700;color:var(--primary);">Connected Data Sources</h3>
+      <button class="btn btn-sm btn-primary" onclick="window.location.href='404.html'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Add Source
+      </button>
+    </div>
+
+    <div class="ds-grid">
+      <!-- Website Tracker -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:rgba(27,58,45,0.08);color:var(--primary);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <span class="status-badge status-connected">Connected</span>
+        </div>
+        <h4>Website Tracker</h4>
+        <p>stackly.com — Primary analytics script embedded across all pages.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">128K</div><div class="lbl">Page Views</div></div>
+          <div class="ds-card-stat"><div class="val">99.9%</div><div class="lbl">Uptime</div></div>
+          <div class="ds-card-stat"><div class="val">32ms</div><div class="lbl">Latency</div></div>
+        </div>
+      </div>
+
+      <!-- API Integration -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:var(--info-bg);color:var(--info);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="status-badge status-connected">Connected</span>
+        </div>
+        <h4>REST API</h4>
+        <p>Custom events via API — Server-side event tracking for backend systems.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">8.4K</div><div class="lbl">Events/Day</div></div>
+          <div class="ds-card-stat"><div class="val">100%</div><div class="lbl">Success</div></div>
+          <div class="ds-card-stat"><div class="val">18ms</div><div class="lbl">Latency</div></div>
+        </div>
+      </div>
+
+      <!-- Shopify -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:var(--success-bg);color:var(--success);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          </div>
+          <span class="status-badge status-connected">Connected</span>
+        </div>
+        <h4>Shopify Store</h4>
+        <p>E-commerce tracking — Purchase events, cart abandonment, and revenue.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">$72K</div><div class="lbl">Revenue</div></div>
+          <div class="ds-card-stat"><div class="val">3.2K</div><div class="lbl">Orders</div></div>
+          <div class="ds-card-stat"><div class="val">4.1%</div><div class="lbl">Conv. Rate</div></div>
+        </div>
+      </div>
+
+      <!-- WordPress -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <span class="status-badge status-connected">Connected</span>
+        </div>
+        <h4>WordPress Blog</h4>
+        <p>Content analytics — Article performance, reading depth, and engagement.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">24.9K</div><div class="lbl">Page Views</div></div>
+          <div class="ds-card-stat"><div class="val">4:18</div><div class="lbl">Avg. Read</div></div>
+          <div class="ds-card-stat"><div class="val">68%</div><div class="lbl">Scroll Depth</div></div>
+        </div>
+      </div>
+
+      <!-- Slack Webhook -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:var(--warning-bg);color:var(--warning);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <span class="status-badge status-connected">Connected</span>
+        </div>
+        <h4>Slack Alerts</h4>
+        <p>Real-time notifications — Traffic anomalies and goal completions sent to Slack.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">142</div><div class="lbl">Alerts Sent</div></div>
+          <div class="ds-card-stat"><div class="val">98%</div><div class="lbl">Delivery</div></div>
+          <div class="ds-card-stat"><div class="val">< 1s</div><div class="lbl">Delay</div></div>
+        </div>
+      </div>
+
+      <!-- Email Reports -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:var(--danger-bg);color:var(--danger);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span class="status-badge status-connected">Connected</span>
+        </div>
+        <h4>Email Reports</h4>
+        <p>Automated weekly digests — Summary reports sent to team members every Monday.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">24</div><div class="lbl">Recipients</div></div>
+          <div class="ds-card-stat"><div class="val">Weekly</div><div class="lbl">Frequency</div></div>
+          <div class="ds-card-stat"><div class="val">92%</div><div class="lbl">Open Rate</div></div>
+        </div>
+      </div>
+
+      <!-- Google Search Console -->
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <div class="ds-card-icon" style="background:rgba(27,58,45,0.06);color:var(--sage);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <span class="status-badge status-pending">Syncing</span>
+        </div>
+        <h4>Google Search Console</h4>
+        <p>SEO data import — Search queries, impressions, click-through rates.</p>
+        <div class="ds-card-stats">
+          <div class="ds-card-stat"><div class="val">5.2K</div><div class="lbl">Queries</div></div>
+          <div class="ds-card-stat"><div class="val">180K</div><div class="lbl">Impressions</div></div>
+          <div class="ds-card-stat"><div class="val">2.8%</div><div class="lbl">Avg. CTR</div></div>
+        </div>
+      </div>
+
+      <!-- Add New Source -->
+      <div class="ds-card" style="border:2px dashed var(--gray-300);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;min-height:220px;" onclick="window.location.href='404.html'">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-100);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--gray-400);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <h4 style="color:var(--gray-500);font-weight:600;">Add New Source</h4>
+        <p style="text-align:center;font-size:0.82rem;">Connect a new data source or integration to expand your analytics.</p>
+      </div>
+    </div>
+
+    <!-- API Status Table -->
+    <div class="dash-row-full" style="margin-top:2rem;">
+      <div class="dash-panel">
+        <div class="dash-panel-header"><h3 class="dash-panel-title">Pipeline Health (Last 24 Hours)</h3></div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Source</th><th>Events Processed</th><th>Errors</th><th>Error Rate</th><th>Avg. Latency</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong style="color:var(--primary);">Website Tracker</strong></td><td>128,472</td><td>12</td><td>0.009%</td><td>32ms</td><td><span class="status-badge status-active">Healthy</span></td></tr>
+              <tr><td><strong style="color:var(--primary);">REST API</strong></td><td>8,420</td><td>3</td><td>0.036%</td><td>18ms</td><td><span class="status-badge status-active">Healthy</span></td></tr>
+              <tr><td><strong style="color:var(--primary);">Shopify Store</strong></td><td>4,280</td><td>0</td><td>0.000%</td><td>45ms</td><td><span class="status-badge status-active">Healthy</span></td></tr>
+              <tr><td><strong style="color:var(--primary);">WordPress Blog</strong></td><td>6,120</td><td>2</td><td>0.033%</td><td>38ms</td><td><span class="status-badge status-active">Healthy</span></td></tr>
+              <tr><td><strong style="color:var(--primary);">Slack Alerts</strong></td><td>142</td><td>1</td><td>0.704%</td><td>820ms</td><td><span class="status-badge status-pending">Degraded</span></td></tr>
+              <tr><td><strong style="color:var(--primary);">Email Reports</strong></td><td>24</td><td>0</td><td>0.000%</td><td>2.1s</td><td><span class="status-badge status-active">Healthy</span></td></tr>
+              <tr><td><strong style="color:var(--primary);">Search Console</strong></td><td>5,200</td><td>148</td><td>2.846%</td><td>1.4s</td><td><span class="status-badge status-pending">Syncing</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="toast-container" aria-live="polite"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
