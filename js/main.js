@@ -47,22 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobile);
 
   /* ---------- Scroll Reveal ---------- */
-  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up');
-  if (reveals.length > 0) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-    reveals.forEach((el, i) => {
-      el.style.setProperty('--i', i % 6);
-      revealObserver.observe(el);
-    });
-  }
+  // Handled entirely by GSAP in animations.js now
 
   /* ---------- Stat Counter ---------- */
   const statNumbers = document.querySelectorAll('.stat-number[data-count]');

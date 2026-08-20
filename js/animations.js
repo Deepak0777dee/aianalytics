@@ -164,4 +164,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- Standalone Reveal Animations ---------- */
+  document.querySelectorAll('.reveal:not(.stagger-children .reveal)').forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 85%' },
+      y: 40, opacity: 0, duration: 0.8, ease: 'power3.out'
+    });
+  });
+
+  document.querySelectorAll('.reveal-left').forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 85%' },
+      x: -50, opacity: 0, duration: 0.8, ease: 'power3.out'
+    });
+  });
+
+  document.querySelectorAll('.reveal-right').forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 85%' },
+      x: 50, opacity: 0, duration: 0.8, ease: 'power3.out'
+    });
+  });
 });
